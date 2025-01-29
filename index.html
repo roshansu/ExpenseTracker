@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Expense tracker</title>
+</head>
+<body>
+    
+    <div id="first" class="outer">
+        <div class="start">
+            <h1>EXPENSE TRACKER</h1>
+            <div class="card">
+                <p>Enter Your Name</p>
+                <input id="name" min="1" maxlength="15" type="text" placeholder="type" required>
+                <button id="Next" class="next">Next
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="root" class="main">
+        <div class="left">
+            <div class="user">
+                <img src="../i3.png" alt="">
+                <h3 id="user-name">Roshan</h3>
+            </div>
+
+            <div class="category">
+                <div id="input-section">
+                    <input id="input-add" type="text" placeholder="Add">
+                    <button id="add" class="add">Add +</button>
+                </div>
+                <div class="all-button">
+                    <!-- <button>Grocery</button>
+                    <button>Shopping</button>
+                    <button>Travel</button>
+                    <button>Other</button> -->
+                    
+                </div>
+                <div style="margin-top: 15px;"  class="report">
+                    <button class="left-button"  id="all-report">View report</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="right" class="right">
+            <div class="right-head box">
+                <h1  id="expense-category">Expense Tracker</h1>
+            </div>
+
+            <form  id="expenses" class="input-area box">
+                <div class="add-date">
+                    <input min="1" type="number" id="add-expense" placeholder="Enter amount" required>
+                </div>
+                <div class="add-date">
+                    <input type="date" id="expense-date" placeholder="Select date" required>
+                </div>
+                <div class="add-date"><input type="text" maxlength="12" id="remarks" placeholder="remarks" required></div>
+                <div class="debit-credit">
+                    <label style="color:  #FF4C4C;" for="type">Debit</label>
+                    <input type="radio" name="type" value="Debit" placeholder="Debit" required>
+                    <label style="color: mediumseagreen;" for="type">Credit</label>
+                    <input type="radio" name="type" value="Credit" placeholder="Credit"required>
+                </div>
+                <button id="submit" type="submit">Add +</button>
+            </form>
+
+            <table class="table-body">
+                <thead class="table-head">
+                    <tr>
+                        <th>Sl. no.</th>
+                        <th>Amount</th>
+                        <th>Remarks</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <!-- <tr class="table-card">
+                        <td>1</td>
+                        <td>₹2000</td>
+                        <td>Chocolate</td>
+                        <td class="debit">Debit</td>
+                        <td>22 jan 25</td>
+                    </tr> -->
+                </tbody>
+            </table>
+
+            <div class="total-sum box">
+                <h3>Total Expense</h3>
+                <h3 id="total-credit" style="color: #28A745;">Total Credits = 0.00</h3>
+                <h3 id="total-debits" style="color: #FF4C4C;;">Debits = 0.00</h3>
+            </div>
+
+            <div>
+                <button class="inner-report" id="inner-report">View report</button>
+                <!-- <button class="inner-report" id="save">Save</button> -->
+            </div>
+        </div>
+
+        <div id="reports" class="report-card">
+            <div class="report-head">
+                <h1 id="title">Shopping expense report</h1>
+            </div>
+
+            <div id="chart" class="report-main">
+                <div style="grid-row-start: 2;" class="report-box">₹10000</div>
+                <div style="grid-row-start: 3;" class="report-box">₹90000</div>
+                <div style="grid-row-start: 4;" class="report-box">₹80000</div>
+                <div style="grid-row-start: 5;" class="report-box">₹70000</div>
+                <div style="grid-row-start: 6;" class="report-box">₹60000</div>
+                <div style="grid-row-start: 7;" class="report-box">₹50000</div>
+                <div style="grid-row-start: 8;" class="report-box">₹40000</div>
+                <div style="grid-row-start: 9;" class="report-box">₹30000</div>
+                <div style="grid-row-start: 10;" class="report-box">₹20000</div>
+                <div style="grid-row-start: 11;" class="report-box">₹10000</div>
+            </div>
+    </div>
+    
+</body>
+<script src="./script.js"></script>
+</html>
