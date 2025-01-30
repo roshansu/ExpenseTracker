@@ -359,12 +359,12 @@ function getFirstDigit(number){
         div.classList.add('remove');
         const p1 = document.createElement('p');
         p1.classList.add('remove');
-        p1.innerHTML = key;
+        p1.innerHTML = `${key}/Credit`;
         const div2 = document.createElement('div');
         div2.classList.add('remove');
         const p2 = document.createElement('p');
         p2.classList.add('remove');
-        p2.innerHTML = key;
+        p2.innerHTML = `${key}/Debit`;
 
         div.appendChild(p1);
         div.classList.add('chart-card');
